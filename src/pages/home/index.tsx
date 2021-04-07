@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Block } from '@tarojs/components'
+import { View, Block } from '@tarojs/components'
 import { HomeProps } from './index.interface';
-import { PageButton, GasItem } from '../../components';
+import { GasItem } from '../../components';
 import './index.scss';
 
 const Home: React.FC<HomeProps> = () => {

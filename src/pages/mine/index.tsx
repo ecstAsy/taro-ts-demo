@@ -1,26 +1,15 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { MineProps } from './index.interface';
-import { View, Text, Button } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { UserInfo, OrderTab, ActionItem } from './components';
 import { phone, setting, tg, wechat, question } from '../../assets';
 import './index.scss';
 
-const Mine: React.FC<MineProps> = props => {
-
-
-  const getUserProfile = async () => {
-    try {
-      const data = await Taro.getUserProfile({ desc: '用于完善会员资料' });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+const Mine: React.FC<MineProps> = () => {
 
   return (
     <View className='index'>
-      {/* <Button onClick={() => getUserProfile()}>获取头像昵称</Button> */}
       <UserInfo />
       <OrderTab />
       <ActionItem
