@@ -1,0 +1,199 @@
+@import "../../styles/base.scss";
+
+.gas-item {
+  width: 686px;
+  margin: 0 auto;
+  padding: 30px 32px 15px;
+  border-bottom: 1px solid $border-color-base;
+  font-family: $font-regular;
+  z-index: 1;
+  position: relative;
+  background: #fff;
+
+  .gas-auth-btn {
+    position: absolute;
+    @include wh(100%, 100%);
+    background-color: transparent;
+    outline: medium;
+    border: none;
+    z-index: 110;
+
+    &::after {
+      outline: medium;
+      border: none;
+    }
+  }
+
+  .gas-name {
+    @include sc(34px, #000);
+    font-family: $font-medium;
+    width: 70%;
+    @include ellipse();
+  }
+
+  .gas-address {
+    @include sc(24px, $font-color-gray);
+    line-height: 33px;
+    margin-top: 8px;
+    width: 80%;
+  }
+
+  .gas-salary {
+    @include wh(100%, 62px);
+    margin-top: 20px;
+
+    .current-price {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+
+      .current {
+        @include sc(44px, $theme-color);
+        text-align: left;
+
+        .unit {
+          font-size: 22px;
+        }
+      }
+
+      .discount {
+        position: absolute;
+        display: block;
+        @include wh(50px, 30px);
+        background-color: #ff8547;
+        border-radius: 4px;
+        @include sc(18px, #fff);
+        font-family: $font-regular;
+        font-weight: 400;
+        top: 1px;
+        right: -58px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+
+    .toast-price {
+      display: inline-block;
+      vertical-align: middle;
+      // margin-left: 74px;
+      margin-left: 16px;
+
+      .toast-price-box {
+        @include wh(100%, 30px);
+        padding: 16px 0;
+        clear: both;
+
+        .cost-price {
+          float: left;
+          @include wh(128px, 30px);
+          @include fj();
+          border-radius: 4px;
+          overflow: hidden;
+
+          .cost-icon {
+            flex: 30;
+            height: 30px;
+            background-color: $theme-color;
+
+            .cost-icon-img {
+              display: block;
+              @include wh(16px, 16px);
+              margin: 8px auto;
+            }
+          }
+
+          .cost-txt {
+            flex: 98;
+            @include hl(30px);
+            background: rgba(229, 1, 18, 0.1);
+            @include sc(18px, $theme-color);
+            text-align: center;
+          }
+        }
+
+        .old-price {
+          float: left;
+          @include hl(30px);
+          @include sc(22px, $font-color-gray);
+          text-decoration: line-through;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .gas-toast {
+    margin-top: 12px;
+
+    .auto-gas-tag {
+      @include sc(22px, $font-color-gray);
+      display: inline-block;
+      border: 1px solid $border-color-base;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-right: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .gas-info {
+    .sale-item {
+      View {
+        display: inline-block;
+        vertical-align: middle;
+
+        &.sale-title {
+          @include wh(26px, 26px);
+          background: rgba(252, 166, 82, 0.1);
+          border: 1px solid rgba(255, 133, 71, 1);
+          @include sc(20px, #FF8547);
+          text-align: center;
+          border-radius: 4px;
+          margin-right: 8px;
+          vertical-align: middle;
+          line-height: 26px;
+        }
+
+        &.sale-txt {
+          @include sc(22px, $font-color-gray);
+          line-height: 30px;
+        }
+      }
+
+    }
+  }
+
+  .sale-icon {
+    @include wh(100px, 100px);
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    right: 53px;
+    top: 202px;
+    z-index: 10;
+  }
+
+  .gas-distance {
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    right: 50px;
+
+    .distance-icon {
+      width: 100%;
+      margin-bottom: 8px;
+
+      Image {
+        display: block;
+        @include wh(42px, 42px);
+        margin: 0 auto;
+      }
+    }
+
+    .distance-num {
+      width: 100px;
+      @include sc(24px, $font-color-gray);
+      line-height: 33px;
+    }
+  }
+}

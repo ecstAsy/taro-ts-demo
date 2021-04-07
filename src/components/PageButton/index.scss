@@ -1,0 +1,15 @@
+.page-button {
+  width: 80%;
+  height: 80px;
+  border: none;
+  outline: medium;
+  border-radius: 40px;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 80px;
+
+  ::after {
+    border: none;
+    outline: medium;
+  }
+}
