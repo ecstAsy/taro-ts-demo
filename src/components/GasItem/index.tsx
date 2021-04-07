@@ -20,7 +20,6 @@ const GasItem: React.FC<GasItemProps> = ({
             <Text className='unit'>￥</Text>
             {unitPrice}
           </View>
-          {/* <View className='discount'>{discount / 10}折</View> */}
         </View>
         <View className='toast-price'>
           <View className='toast-price-box'>

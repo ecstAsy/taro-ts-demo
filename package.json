@@ -26,7 +26,8 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "mock": "mocker ./mock"
   },
   "browserslist": [
     "last 3 versions",
@@ -45,6 +46,8 @@
     "@tarojs/taro": "3.1.4",
     "dva-core": "^2.0.4",
     "dva-loading": "^3.0.22",
+    "mocker-api": "^2.8.3",
+    "mockjs": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "redux": "^4.0.5",
@@ -66,6 +69,8 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "mocker-api": "^2.8.3",
+    "mockjs": "^1.1.0",
     "stylelint": "9.3.0",
     "typescript": "^4.1.0"
   }
