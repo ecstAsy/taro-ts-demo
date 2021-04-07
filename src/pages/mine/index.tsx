@@ -1,5 +1,4 @@
 import React from 'react';
-import Taro from '@tarojs/taro';
 import { MineProps } from './index.interface';
 import { View } from '@tarojs/components'
 import { UserInfo, OrderTab, ActionItem } from './components';

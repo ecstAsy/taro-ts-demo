@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, Block } from '@tarojs/components';
 import { GasItemProps, RemarkProps } from './index.interface';
 import { position, cost } from '../../assets';
-import { getBalance, throttle, toDecimal2 } from '../../utils/util';
+import { getBalance, toDecimal2 } from '../../utils/util';
 import './index.scss';
 
 const GasItem: React.FC<GasItemProps> = ({
@@ -36,14 +36,6 @@ const GasItem: React.FC<GasItemProps> = ({
           </View>
         </View>
       </View>
-      {/* <View className='gas-toast'>
-        <View className='auto-gas-tag'>
-          92#不可用券
-        </View>
-        <View className='auto-gas-tag'>
-          发票当场开过期作废
-        </View>
-      </View> */}
       <View className='gas-info'>
         {
           remarks.map((item: RemarkProps) =>
