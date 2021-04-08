@@ -14,4 +14,4 @@ declare module '@tarojs/taro' {
 
 // 声明
 declare let require: any;
-declare let dispatch: any
+declare let dispatch: any;

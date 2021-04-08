@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Taro from '@tarojs/taro';
+import { connect } from 'react-redux';
 import { View, Block } from '@tarojs/components'
 import { HomeProps } from './index.interface';
 import { GasItem } from '../../components';
 import './index.scss';
 
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC<HomeProps> = ({
+  dispatch, home
+}) => {
+
+  const getUserInfo = async () => {
+    await dispatch({
+      type: 'home/info'
+    })
+  }
+
+  useEffect(() => {
+    getUserInfo()
+  }, [])
+
   const DataArray = [
     {
       id: 1,
@@ -101,4 +116,8 @@ const Home: React.FC<HomeProps> = () => {
   )
 }
 
-export default Home
+export default connect(({
+  home
+}) => ({
+  home
+}))(Home)

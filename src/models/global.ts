@@ -13,7 +13,7 @@ const getSystemInfo = () => {
 export default {
   namespace: 'global',
   state: {
-    SystemInfo: getSystemInfo(),
+    // SystemInfo: getSystemInfo(),
     userId: 1,
     userInfo: null,
   },

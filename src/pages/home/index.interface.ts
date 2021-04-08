@@ -14,6 +14,7 @@ export interface HomeState {
  */
 export interface HomeProps {
   dispatch?: any,
+  home: object,
   data?: Array<DataInterface>
 }
 
