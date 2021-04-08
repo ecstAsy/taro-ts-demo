@@ -8,3 +8,12 @@ export interface PageButtonProps {
   theme?: string,
   onClick?: any
 }
+
+/**
+ * LoadMore.props 参数类型
+ * @interface LoadMorenProps
+ */
+
+export interface LoadMorenProps {
+  loading: boolean
+}

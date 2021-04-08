@@ -1,68 +1,74 @@
 import React, { useEffect } from 'react';
-import Taro from '@tarojs/taro';
+import Taro, { useReachBottom } from '@tarojs/taro';
 import { connect } from 'react-redux';
-import { View, Block } from '@tarojs/components'
+import { View, Block } from '@tarojs/components';
 import { HomeProps } from './index.interface';
-import { GasItem } from '../../components';
+import { LoadMore } from '../../components';
+import { PageSpace, HomeBanner, CardItem } from './components';
 import './index.scss';
 
 const Home: React.FC<HomeProps> = ({
-  dispatch, home
+  dispatch, home, loading
 }) => {
 
-  const { GasLists } = home;
-
-  const getUserInfo = async () => {
-    await dispatch({
-      type: 'home/info'
-    })
-
-  }
+  const { Trips, next_start } = home;
 
   const getLists = async () => {
     const data = await dispatch({
-      type: 'home/list'
+      type: 'home/load',
+      payload: {
+        next_start
+      }
     })
+    if (!data) return false;
     await dispatch({
       type: 'home/save',
       payload: {
-        GasLists: data.list
+        Trips: !Trips.length ? data.elements : [...Trips, ...data.elements],
+        next_start: data.next_start
       }
     })
   }
 
   useEffect(() => {
-    getUserInfo();
     getLists();
   }, [])
 
-  const handleClick = id => {
-    console.log(id);
-  }
+  useReachBottom(() => next_start && getLists())
+
+  const handleInfo = ({ id, name }) =>
+    Taro.navigateTo({
+      url: `/pages/tripInfo/index?id=${id}&name=${name}&visit=v_home`
+    })
 
   return (
-    <View className='index'>
+    <View className='home'>
+      <PageSpace />
+      <Block>
+        <HomeBanner />
+      </Block>
       <Block>
         {
-          GasLists && GasLists.length ?
-            GasLists.map(item =>
-              <Block>
-                <GasItem
-                  {...item}
-                  onClick={() => handleClick(item.id)}
-                />
-              </Block>
-            )
-            :
-            null
+          Trips.map(item =>
+            <Block>
+              <CardItem
+                Info={item.data[0]}
+                type='v_home'
+                onClick={() => handleInfo(item.data[0])}
+              />
+            </Block>
+          )
         }
       </Block>
+      <LoadMore loading={loading} />
     </View>
   )
 }
 
 export default connect(({
-  home
+  home,
+  loading
 }: any) => ({
-  home
+  home,
+  loading: loading.models.home
 }))(Home)

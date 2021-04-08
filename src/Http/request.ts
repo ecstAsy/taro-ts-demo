@@ -22,35 +22,11 @@ export default (url: string, options: HttpProps) => {
       ptNumber: 'GAS',
       ...headers
     },
-    method: method.toUpperCase(),
+    method
   }).then((res) => {
     const { statusCode, data } = res;
     if (statusCode >= 200 && statusCode < 300) {
-      // if (!noConsole) {
-      //   console.log(`${new Date().toLocaleString()}【 M=${options.url} 】【接口响应：】`, res.data);
-      // }
-      if (data.statusCode && data.statusCode === '200') {
-        return data
-      } else {
-        if (data.statusCode === '700') {
-          return data
-        }
-        if (!url.match('/gatherUserBehLog')) {
-          Taro.showToast({
-            icon: 'none',
-            title: `网络异常！`,
-            mask: true
-          })
-        }
-      }
-    } else {
-      if (!url.match('/gatherUserBehLog')) {
-        Taro.showToast({
-          icon: 'none',
-          title: `系统异常！`,
-          mask: true
-        })
-      }
+      return data
     }
   })
     .catch(() => {

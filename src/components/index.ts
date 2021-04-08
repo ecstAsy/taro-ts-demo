@@ -1,13 +1,9 @@
+import LoadMore from './LoadMore';
 import PageButton from './PageButton';
-import GasItem from './GasItem';
-
-const Cop = {
-  PageButton,
-  GasItem
-}
+import PageSpace from './PageSpace';
 
 export {
-  Cop as default,
+  LoadMore,
   PageButton,
-  GasItem
+  PageSpace
 }

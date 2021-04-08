@@ -4,7 +4,7 @@
  */
 
 export interface HttpProps {
-  method: string | 'GET',
+  method: 'GET' | 'POST' | 'DELETE' | 'PUT',
   data?: object,
   headers?: object,
   contentType?: object

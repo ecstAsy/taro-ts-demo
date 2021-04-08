@@ -1,0 +1,45 @@
+@import "../../styles/base.scss";
+
+.trip {
+  @include wh(100%, 100%);
+  background: #fbf7ed;
+
+  .trip-info {
+    margin: 0 30px;
+
+    .trip-info-day {
+      color: $color-primary;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 32px;
+      height: 32px;
+      margin-top: 40px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 50px;
+        background: $color-primary;
+        left: 20px;
+        bottom: -45px;
+        border-radius: 4px;
+      }
+
+      Text {
+        &.circle {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 6px solid $color-primary;
+          margin-left: 9px;
+          margin-top: 3px;
+        }
+
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -10,3 +10,9 @@ export const gasList = async data =>
     method: 'POST',
     data
   })
+
+export const v1_list = async data =>
+  Request(`${Api.home.list}`, {
+    method: 'GET',
+    data
+  })

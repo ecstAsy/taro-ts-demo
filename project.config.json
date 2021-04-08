@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "TS-GAS",
   "description": "taro ts ",
-  "appid": "touristappid",
+  "appid": "wx6bf4d3c4b27f7055",
   "setting": {
     "urlCheck": true,
     "es6": false,

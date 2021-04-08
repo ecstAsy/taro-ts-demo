@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@tarojs/components';
-import { PageButtonProps } from './index.interface';
+import { PageButtonProps } from '../index.interface';
 import './index.scss';
 
 const PageButton: React.FC<PageButtonProps> = props => {

@@ -1,0 +1,5 @@
+@import "../../styles/base.scss";
+
+.page-space {
+  @include wh(100%, 24px);
+}

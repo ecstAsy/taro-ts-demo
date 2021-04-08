@@ -11,6 +11,11 @@ import kaipiao from './kaipiao.png';
 import evaluateFalse from './evaluate-false.png';
 import avator from './avator.png';
 
+import swipera from './a.jpeg';
+import swiperb from './b.jpeg';
+import swiperc from './c.jpeg';
+import swiperd from './d.jpeg';
+
 const PIcon = {
   position,
   cost,
@@ -23,11 +28,15 @@ const PIcon = {
   order,
   kaipiao,
   evaluateFalse,
-  avator
+  avator,
+  swipera,
+  swiperb,
+  swiperc,
+  swiperd
 }
 
 export {
-  PIcon as default,
+  // PIcon as default,
   position,
   cost,
   phone,
@@ -39,5 +48,9 @@ export {
   order,
   kaipiao,
   evaluateFalse,
-  avator
+  avator,
+  swipera,
+  swiperb,
+  swiperc,
+  swiperd
 }
