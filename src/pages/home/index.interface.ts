@@ -14,14 +14,9 @@ export interface HomeState {
  */
 export interface HomeProps {
   dispatch?: any,
-  home: object,
-  data?: Array<DataInterface>
+  home: any,
 }
 
-export interface DataInterface {
-  des: string,
-  lunar: string,
-  thumbnail_pic_s: string,
-  title: string,
-  _id: string
+export interface IHome {
+  GasLists: object[]
 }

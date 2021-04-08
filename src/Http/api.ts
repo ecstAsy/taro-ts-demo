@@ -1,8 +1,11 @@
-const APIV = '';
+const APIV = '/api';
 
 const Api = {
   user: {
-    info: `${APIV}/api/user/1`
+    info: `${APIV}/user/1`
+  },
+  gas: {
+    list: `${APIV}/gas/list`
   }
 }
 
