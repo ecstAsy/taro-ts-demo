@@ -3,24 +3,24 @@ export default {
     'pages/home/index',
     'pages/tripInfo/index',
     'pages/noteCard/index',
-    'pages/mine/index'
+    'pages/user/index'
   ],
-  // tabBar: {
-  //   list: [{
-  //     pagePath: 'pages/home/index',
-  //     text: '加油',
-  //     iconPath: "./assets/tab/oil_b.png",
-  //     selectedIconPath: "./assets/tab/oil_a.png",
-  //   }, {
-  //     pagePath: 'pages/mine/index',
-  //     text: '我的',
-  //     iconPath: "./assets/tab/mine_b.png",
-  //     selectedIconPath: "./assets/tab/mine_a.png",
-  //   }],
-  //   color: '#909095',
-  //   selectedColor: '#E50112',
-  //   borderStyle: 'white'
-  // },
+  tabBar: {
+    list: [{
+      pagePath: 'pages/home/index',
+      text: '游记',
+      iconPath: "./assets/tab/note_b.png",
+      selectedIconPath: "./assets/tab/note_a.png",
+    }, {
+      pagePath: 'pages/user/index',
+      text: '我的',
+      iconPath: "./assets/tab/mine_b.png",
+      selectedIconPath: "./assets/tab/mine_a.png",
+    }],
+    color: '#cdcdcd',
+    selectedColor: '#f16b7d',
+    borderStyle: 'white'
+  },
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

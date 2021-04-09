@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardItemProps } from '../index.interface';
 import { View, Image, Text } from '@tarojs/components';
-import './style.scss';
+import './index.scss';
 
 const CardItem: React.FC<CardItemProps> = ({ Info, type, onClick }) => {
 

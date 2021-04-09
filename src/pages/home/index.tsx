@@ -3,8 +3,8 @@ import Taro, { useReachBottom } from '@tarojs/taro';
 import { connect } from 'react-redux';
 import { View, Block } from '@tarojs/components';
 import { HomeProps } from './index.interface';
-import { LoadMore } from '../../components';
-import { PageSpace, HomeBanner, CardItem } from './components';
+import { LoadMore, CardItem } from '../../components';
+import { PageSpace, HomeBanner } from './components';
 import './index.scss';
 
 const Home: React.FC<HomeProps> = ({
@@ -21,7 +21,7 @@ const Home: React.FC<HomeProps> = ({
       }
     })
     if (!data) return false;
-    await dispatch({
+    return dispatch({
       type: 'home/save',
       payload: {
         Trips: !Trips.length ? data.elements : [...Trips, ...data.elements],

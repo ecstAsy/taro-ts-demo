@@ -12,7 +12,7 @@ const Api = {
     info: `trips/`
   },
   user: {
-    info: `users/`
+    info: `users/2387817441`
   }
 }
 

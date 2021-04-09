@@ -29,3 +29,9 @@ export interface TripCardProps {
   Info: InfoProps,
   onClick?: any
 }
+
+export interface CardItemProps {
+  Info: InfoProps,
+  type: string,
+  onClick?: any
+}

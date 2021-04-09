@@ -1,0 +1,32 @@
+@import "../../styles/base.scss";
+
+.page-user {
+  @include wh(100%, 100%);
+
+  .page-user-trip-title {
+    margin: 30px;
+    line-height: 1;
+
+    Text,
+    span {
+      &:first-of-type {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 40px;
+        color: $color-primary;
+        vertical-align: middle;
+      }
+
+      &:last-of-type {
+        font-size: 28px;
+        display: inline-block;
+        padding: 5px 20px;
+        background: $color-primary;
+        color: #fff;
+        margin-left: 40px;
+        border-radius: 20px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
