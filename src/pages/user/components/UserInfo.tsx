@@ -9,20 +9,20 @@ const UserInfo: React.FC<UserInfoProps> = ({
   return (
     <View className='user-info'>
       {
-        Info?.cover && <Image src={Info.cover} />
+        Info?.cover && <Image className='user-info-img' src={Info.cover} />
       }
       <View className='user-info-mask' />
       <View className='user-info-detail'>
         <View className='user-info-detail-follower'>
-          <Text>{Info?.followers_count}</Text>
-          <Text>粉丝</Text>
+          <Text className='user-info-detail-follower-num'>{Info?.followers_count}</Text>
+          <Text className='user-info-detail-follower-name'>粉丝</Text>
         </View>
         <View className='user-info-detail-avator'>
-          <Image src={Info?.avatar_l} />
+          <Image className='user-info-detail-avator-img' src={Info?.avatar_l} />
         </View>
         <View className='user-info-detail-follow'>
-          <Text>{Info?.followings_count}</Text>
-          <Text>关注</Text>
+          <Text className='user-info-detail-follower-num'>{Info?.followings_count}</Text>
+          <Text className='user-info-detail-follower-name'>关注</Text>
         </View>
       </View>
       <View className='user-info-name'>

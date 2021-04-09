@@ -13,14 +13,14 @@ const TripCard: React.FC<TripCardProps> = ({
       onClick={onClick}
     >
       {
-        Info.photo_webtrip && <Image mode='widthFix' src={Info.photo_webtrip} lazyLoad />
+        Info.photo_webtrip && <Image className='trip-card-img' mode='widthFix' src={Info.photo_webtrip} lazyLoad />
       }
       <View className='trip-card-content'>
         {Info.text}
       </View>
       <View className='trip-card-position'>
-        <Image src={time} />
-        <Text>{Info.local_time}</Text>
+        <Image className='trip-card-position-img' src={time} />
+        <Text className='trip-card-position-time'>{Info.local_time}</Text>
       </View>
     </View>
   )

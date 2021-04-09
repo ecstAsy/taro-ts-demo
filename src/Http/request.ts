@@ -12,8 +12,15 @@ import { baseUrl, noConsole } from './config';
 
 export default (url: string, options: HttpProps) => {
   const { method = 'GET', data = {}, headers = {}, contentType } = options;
+  // 根据不同的环境来补全请求地址
+  let Url = ''
+  if (Taro.getEnv() === 'WEB') {
+    Url = `/${url}`
+  } else {
+    Url = `${baseUrl}${url}`
+  }
   return Taro.request({
-    url: baseUrl + url,
+    url: Url,
     data: {
       ...data
     },

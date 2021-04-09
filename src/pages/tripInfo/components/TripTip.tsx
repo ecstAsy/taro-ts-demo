@@ -8,7 +8,7 @@ const TripTip: React.FC<TripTipProps> = ({
 }) => {
   return (
     <View className='trip-tip'>
-      <Image src={Info?.user?.avatar_l} />
+      <Image className='trip-tip-img' src={Info?.user?.avatar_l} />
       <View className='trip-tip-info'>
         <View className='trip-tip-info-title'>{Info?.name}</View>
         <View className='trip-tip-info-detail'>

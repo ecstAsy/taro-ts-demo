@@ -9,7 +9,7 @@ const CardItem: React.FC<CardItemProps> = ({ Info, type, onClick }) => {
 
   return (
     <View className='card-item' onClick={onClick}>
-      <Image src={Info.cover_image_w640} />
+      <Image className='card-item-img' src={Info.cover_image_w640} />
       <View className='card-item-info'>
         <Text className='card-item-info-title'>{Info.name}</Text>
         <View className='card-item-info-detail'>
@@ -25,14 +25,14 @@ const CardItem: React.FC<CardItemProps> = ({ Info, type, onClick }) => {
         {
           type === 'v_home' ?
             <View className='card-item-info-auther'>
-              <Image src={Info.user.avatar_l} />
-              <Text>by {Info.user.name}</Text>
+              <Image className='card-item-info-auther-img' src={Info.user.avatar_l} />
+              <Text className='card-item-info-auther-name author'>by {Info.user.name}</Text>
             </View>
             :
             <View className='card-item-info-auther'>
-              <Text>{Info.view_count}次浏览</Text>/
-                  <Text>{Info.liked_count}喜欢</Text>/
-                  <Text>{Info.total_comments_count}评论</Text>
+              <Text className='card-item-info-auther-name'>{Info.view_count}次浏览</Text>/
+              <Text className='card-item-info-auther-name'>{Info.liked_count}喜欢</Text>/
+              <Text className='card-item-info-auther-name'>{Info.total_comments_count}评论</Text>
             </View>
         }
       </View>

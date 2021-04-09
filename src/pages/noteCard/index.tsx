@@ -26,11 +26,11 @@ const NoteCard: React.FC<NoteCardProps> = ({
       <View className='note-card'>
         <TripCard Info={wayPoints} />
         <View className='note-card-like'>
-          <Image src={like} />
+          <Image className='note-card-icon' src={like} />
             喜欢
           </View>
         <View className='note-card-advice'>
-          <Image src={advice} />
+          <Image className='note-card-icon' src={advice} />
             评论
           </View>
       </View>

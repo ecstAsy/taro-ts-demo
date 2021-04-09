@@ -3,6 +3,7 @@
 .page-note-card {
   @include wh(100%, 100%);
   background: #fbf7ed;
+  overflow: hidden;
 
   .note-card {
     border-top: 1px solid transparent;
@@ -19,8 +20,7 @@
       text-align: center;
       margin-bottom: 216px;
 
-      image,
-      .taro-img {
+      .note-card-icon {
         width: 30px;
         height: 30px;
         vertical-align: middle;

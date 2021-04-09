@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import Taro from '@tarojs/taro';
 import { connect } from 'react-redux';
 import { UserProps } from './index.interface';
-import { View, Text, Block } from '@tarojs/components';
+import { View, Text } from '@tarojs/components';
 import { UserInfo } from './components';
 import { CardItem } from '../../components';
 import './index.scss';
@@ -26,8 +27,10 @@ const User: React.FC<UserProps> = ({
     })
   }
 
-  const handleClick = info => {
-
+  const handleClick = ({ id, name }) => {
+    Taro.navigateTo({
+      url: `/pages/tripInfo/index?id=${id}&name=${name}&visit=v_user`
+    })
   }
 
   useEffect(() => {
@@ -38,10 +41,10 @@ const User: React.FC<UserProps> = ({
     <View className='page-user'>
       <UserInfo Info={userInfo} />
       <View className='page-user-trip-title'>
-        <Text>NOTE</Text>
-        <Text>{trips.length}</Text>
+        <Text className='page-user-trip-title-name'>NOTE</Text>
+        <Text className='page-user-trip-title-value'>{trips.length}</Text>
       </View>
-      <Block>
+      <View className='page-user-trip'>
         {
           trips.map((item, i) =>
             <CardItem
@@ -51,7 +54,7 @@ const User: React.FC<UserProps> = ({
               onClick={() => handleClick(item)}
             />)
         }
-      </Block>
+      </View>
     </View>
   )
 }

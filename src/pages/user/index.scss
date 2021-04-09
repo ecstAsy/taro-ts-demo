@@ -7,26 +7,28 @@
     margin: 30px;
     line-height: 1;
 
-    Text,
-    span {
-      &:first-of-type {
-        font-style: italic;
-        font-weight: bold;
-        font-size: 40px;
-        color: $color-primary;
-        vertical-align: middle;
-      }
-
-      &:last-of-type {
-        font-size: 28px;
-        display: inline-block;
-        padding: 5px 20px;
-        background: $color-primary;
-        color: #fff;
-        margin-left: 40px;
-        border-radius: 20px;
-        vertical-align: middle;
-      }
+    .page-user-trip-title-name {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 40px;
+      color: $color-primary;
+      vertical-align: middle;
     }
+
+    .page-user-trip-title-value {
+      font-size: 28px;
+      display: inline-block;
+      padding: 5px 20px;
+      background: $color-primary;
+      color: #fff;
+      margin-left: 40px;
+      border-radius: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  .page-user-trip {
+    width: 94%;
+    padding: 0 3%;
   }
 }
