@@ -13,10 +13,10 @@ React + Taro + Dva + Sass + ES6/ES7 + TypeScript
 
 <figure>
 
-<img style="width:25%" src='./assets/home.png'/>
-<img style="width:25%" src='./assets/tripInfo.png'/>
-<img style="width:25%" src='./assets/noteCard.png'/>
-<img style="width:25%" src='./assets/user.png'/>
+<img style="width:80px;height:140px" src='./assets/home.png'/>
+<img style="width:80px;height:140px" src='./assets/tripInfo.png'/>
+<img style="width:80px;height:140px" src='./assets/noteCard.png'/>
+<img style="width:80px;height:140px" src='./assets/user.png'/>
 
 </figure>
 
