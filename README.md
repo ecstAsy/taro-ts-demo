@@ -10,6 +10,7 @@ React + Taro + Dva + Sass + ES6/ES7 + TypeScript
 ## 预览
 
 <center>
+
 <figure>
 
 <img style="width:25%" src='./assets/home.png'/>
