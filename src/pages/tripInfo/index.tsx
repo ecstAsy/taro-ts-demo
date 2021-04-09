@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import Taro, { getCurrentInstance } from '@tarojs/taro';
 import { connect } from 'react-redux';
-import { TripInfoProps, ParamsProps } from './index.interface';
+import { TripInfoProps } from './index.interface';
 import { TripTip } from './components';
-import { PageSpace } from '../../components';
-import { View } from '@tarojs/components'
+import { PageSpace, TripCard } from '../../components';
+import { View, Block, Text } from '@tarojs/components'
 import './index.scss';
 
 const TripInfo: React.FC<TripInfoProps> = ({
@@ -59,12 +59,46 @@ const TripInfo: React.FC<TripInfoProps> = ({
     getInitInfo()
   }, [])
 
+  const handleClick = info =>
+    Promise.all([
+      dispatch({
+        type: 'tripInfo/save',
+        payload: {
+          wayPoints: info
+        }
+      }),
+      Taro.navigateTo({
+        url: '/pages/noteCard/index'
+      })
+    ])
+
   return (
     <View className='trip'>
       <View className='trip-info'>
         <PageSpace />
         {
           !Loading && <TripTip Info={NoteInfo} />
+        }
+        {
+          !Loading && NoteInfo?.days?.map((day, i) =>
+            <Block key={i}>
+              <View className='trip-info-day'>
+                <Text className='circle' />
+                <Text>{day.date}</Text>
+                <Text>第{day.day}天</Text>
+              </View>
+              {
+                day.waypoints.map((item, j) =>
+                  <TripCard
+                    Info={item}
+                    key={j}
+                    trip
+                    onClick={() => handleClick(item)}
+                  />
+                )
+              }
+            </Block>
+          )
         }
       </View>
     </View>

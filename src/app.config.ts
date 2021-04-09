@@ -2,6 +2,7 @@ export default {
   pages: [
     'pages/home/index',
     'pages/tripInfo/index',
+    'pages/noteCard/index',
     'pages/mine/index'
   ],
   // tabBar: {

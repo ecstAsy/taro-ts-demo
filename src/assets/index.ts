@@ -11,10 +11,9 @@ import kaipiao from './kaipiao.png';
 import evaluateFalse from './evaluate-false.png';
 import avator from './avator.png';
 
-import swipera from './a.jpeg';
-import swiperb from './b.jpeg';
-import swiperc from './c.jpeg';
-import swiperd from './d.jpeg';
+import time from './time.png';
+import advice from './advice.png';
+import like from './like.png';
 
 const PIcon = {
   position,
@@ -29,10 +28,9 @@ const PIcon = {
   kaipiao,
   evaluateFalse,
   avator,
-  swipera,
-  swiperb,
-  swiperc,
-  swiperd
+  time,
+  advice,
+  like
 }
 
 export {
@@ -49,8 +47,7 @@ export {
   kaipiao,
   evaluateFalse,
   avator,
-  swipera,
-  swiperb,
-  swiperc,
-  swiperd
+  time,
+  advice,
+  like
 }

@@ -9,7 +9,10 @@ export interface InfoProps {
   liked_count: number,
   total_comments_count: number,
   first_day: string,
-  recommendations: number
+  recommendations: number,
+  photo_webtrip: string,
+  text: string,
+  local_time: string
 }
 
 export interface userProps {

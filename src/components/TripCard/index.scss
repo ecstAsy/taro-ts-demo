@@ -1,0 +1,53 @@
+@import "../../styles/base.scss";
+
+.trip-card {
+  width: 100%;
+  background: #fff;
+  margin: 40px 0;
+  box-shadow: 0 5px 8px 0 rgba(250, 132, 148, 0.3);
+  position: relative;
+
+  &.connection::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 55px;
+    background: $color-primary;
+    left: 20px;
+    bottom: -45px;
+    border-radius: 4px;
+  }
+
+  image,
+  .taro-img {
+    width: 100%;
+  }
+
+  .trip-card-content {
+    line-height: 1.52;
+    font-size: 32px;
+    padding-top: 20px;
+    margin: 0 15px 20px;
+    color: $color-dark2;
+  }
+
+  .trip-card-position {
+    margin: 0 15px;
+    padding-bottom: 20px;
+
+    image,
+    .taro-img {
+      width: 25px;
+      height: 25px;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+
+    Text,
+    span {
+      font-size: 22px;
+      color: $color-dark2;
+      line-height: 1;
+    }
+  }
+}

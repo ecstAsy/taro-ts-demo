@@ -1,3 +1,4 @@
+import { InfoProps } from '../app.interface';
 /**
  * PageButton.props 参数类型
  * @interface PageButtonProps
@@ -16,4 +17,15 @@ export interface PageButtonProps {
 
 export interface LoadMorenProps {
   loading: boolean
+}
+
+/**
+ * TripCard.props 参数类型
+ * @interface TripCardProps
+ */
+
+export interface TripCardProps {
+  trip?: boolean,
+  Info: InfoProps,
+  onClick?: any
 }

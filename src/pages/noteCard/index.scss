@@ -1,0 +1,31 @@
+@import "../../styles/base.scss";
+
+.page-note-card {
+  @include wh(100%, 100%);
+  background: #fbf7ed;
+
+  .note-card {
+    border-top: 1px solid transparent;
+    margin: 0 30px;
+
+    .note-card-like,
+    .note-card-advice {
+      color: $color-primary;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.5;
+      width: 50%;
+      float: left;
+      text-align: center;
+      margin-bottom: 216px;
+
+      image,
+      .taro-img {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+    }
+  }
+}
