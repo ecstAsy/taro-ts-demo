@@ -10,13 +10,16 @@ React + Taro + Dva + Sass + ES6/ES7 + TypeScript
 ## 预览
 
 <center>
+
 <figure>
 
 <img style="width:25%" src='./assets/home.png'/>
 <img style="width:25%" src='./assets/tripInfo.png'/>
 <img style="width:25%" src='./assets/noteCard.png'/>
 <img style="width:25%" src='./assets/user.png'/>
+
 </figure>
+
 </center>
 
 <!-- ![首页](./assets/home.png)![详情](./assets/tripInfo.png)![详情卡](./assets/noteCard.png)![我的](./assets/user.png) -->
